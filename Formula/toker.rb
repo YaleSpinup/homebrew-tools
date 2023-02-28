@@ -5,21 +5,21 @@
 class Toker < Formula
   desc "Simple token management tool"
   homepage "https://github.com/YaleSpinup/toker"
-  version "0.2.1"
+  version "0.2.2"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.1/toker_0.2.1_darwin_amd64.tar.gz"
-      sha256 "36b695c2e0dafbbe5057a53de3f978c4b64a85e17f3acc7e4a20f76357eee488"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.2/toker_0.2.2_darwin_amd64.tar.gz"
+      sha256 "d1794c6c701b6a42ad1781b10d2c76092bbaad3090260c0b2dc23d56c3ce71cf"
 
       def install
         bin.install "toker"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.1/toker_0.2.1_darwin_arm64.tar.gz"
-      sha256 "93ab20843d8758fe221b55efcc0a876e0b62ee925a949c6a20e23cfa9857ad9e"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.2/toker_0.2.2_darwin_arm64.tar.gz"
+      sha256 "fc38af86e411a68f2a795d98615e7afd6850e0567d1ad7d3caad68ddf962439f"
 
       def install
         bin.install "toker"
@@ -29,16 +29,16 @@ class Toker < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.1/toker_0.2.1_linux_amd64.tar.gz"
-      sha256 "df26f38c49e09bbc852355db619c7e040df28c078b4d84b592329f6ac2ef0baf"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.2/toker_0.2.2_linux_amd64.tar.gz"
+      sha256 "61cc1816a874a5610827dd60ae954bf0dea01dbbbf7e27c778cb81cce40042d2"
 
       def install
         bin.install "toker"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.1/toker_0.2.1_linux_arm64.tar.gz"
-      sha256 "4506037dcee2a816058d79c909c17bff989eaef7e2656210a6c6d08e60398fa0"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.2.2/toker_0.2.2_linux_arm64.tar.gz"
+      sha256 "15b55959c3fe4546e91579f085cca4dfe999288fbc4e09c6e05ef0857c3f5657"
 
       def install
         bin.install "toker"
