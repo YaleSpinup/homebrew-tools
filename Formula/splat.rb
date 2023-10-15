@@ -5,21 +5,21 @@
 class Splat < Formula
   desc "Bootstrap new Spinup APIs"
   homepage "https://github.com/YaleSpinup/splat"
-  version "0.4.6"
+  version "0.4.7"
   license "AGPL-3.0-or-later"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.6/splat_0.4.6_darwin_arm64.tar.gz"
-      sha256 "b305324bde97516fe8e57056b7ca36ebfda187d737bc4030c506a12887ad2a65"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_darwin_amd64.tar.gz"
+      sha256 "ab46b46e1ee1972c6e76b2aa5e2e756b69ef2d1a02f424af0736770e4bcf2c4b"
 
       def install
         bin.install "splat"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.6/splat_0.4.6_darwin_amd64.tar.gz"
-      sha256 "c6e6acdeb2836e5514d2c57239775b95316dc8c3a298cb1659c1a948f8c61e62"
+    if Hardware::CPU.arm?
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_darwin_arm64.tar.gz"
+      sha256 "488e23b22e528cc463cdc6e0e77e0d20e2e1ad0e4dabf918a0c566bdf5ec691a"
 
       def install
         bin.install "splat"
@@ -29,16 +29,16 @@ class Splat < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.6/splat_0.4.6_linux_arm64.tar.gz"
-      sha256 "171eb1256736ad63aaa65b1bd39d22bec47f77fa9d2d377c63197f90d2ded0cc"
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_linux_arm64.tar.gz"
+      sha256 "c65522046820c6c18f2b1524070c0a589312e0083baf6dec45a438b51fdd1e10"
 
       def install
         bin.install "splat"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.6/splat_0.4.6_linux_amd64.tar.gz"
-      sha256 "b7d5fa0a6c2c3d4055820ebf24a8629e0b3ac77d41691b110b59a0e0e8882aab"
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_linux_amd64.tar.gz"
+      sha256 "81d976ac1678c97c24dc6c0fae1da83c47da3125f59c73d35fe6340d8c3d2f5e"
 
       def install
         bin.install "splat"
