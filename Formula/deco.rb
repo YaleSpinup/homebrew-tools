@@ -5,21 +5,21 @@
 class Deco < Formula
   desc "DockerEvironmentCOntrol"
   homepage "https://github.com/YaleUniversity/deco"
-  version "1.4.3-pre"
+  version "1.4.4"
   license "AGPL-3.0-or-later"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.3-pre/deco_1.4.3-pre_darwin_amd64.tar.gz"
-      sha256 "d7f6b4469f1a9ac41603ab88d3a21ea3c1bce029022ba6109fdd071c73ef5c8e"
+    if Hardware::CPU.arm?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.4/deco_1.4.4_darwin_arm64.tar.gz"
+      sha256 "b30c685d5138e618b6e2483445b25a029746c2fff8e28144999f988fa3d91f8c"
 
       def install
         bin.install "deco"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.3-pre/deco_1.4.3-pre_darwin_arm64.tar.gz"
-      sha256 "9f931c3534a354017f03837ecce0316ce160103f19f015740faa2091aa3ee44b"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.4/deco_1.4.4_darwin_amd64.tar.gz"
+      sha256 "f569feeb79e1b631a3263dc5628fbd47cf67656e4f396715cad307985bcd01d9"
 
       def install
         bin.install "deco"
@@ -29,16 +29,16 @@ class Deco < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.3-pre/deco_1.4.3-pre_linux_arm64.tar.gz"
-      sha256 "c2dc276c6faafeef5e4051d9a0e555e90d6aa604ca15fdf0ac344cd77b739437"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.4/deco_1.4.4_linux_arm64.tar.gz"
+      sha256 "b654d2094f4f3759389ab1f1697c2af9d623e1fa4c8ca9458d52b935a455e1d4"
 
       def install
         bin.install "deco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.3-pre/deco_1.4.3-pre_linux_amd64.tar.gz"
-      sha256 "3065e45c8ec850fa0ef211476c7f386bcb43d2396f7aa284e9ada3dbd1411276"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.4/deco_1.4.4_linux_amd64.tar.gz"
+      sha256 "022ae0532884150e257f903505237d2246c317e70178b9366fece3dfd73192a1"
 
       def install
         bin.install "deco"
