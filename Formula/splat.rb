@@ -5,21 +5,21 @@
 class Splat < Formula
   desc "Bootstrap new Spinup APIs"
   homepage "https://github.com/YaleSpinup/splat"
-  version "0.4.7"
+  version "0.4.8-pre"
   license "AGPL-3.0-or-later"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_darwin_amd64.tar.gz"
-      sha256 "ab46b46e1ee1972c6e76b2aa5e2e756b69ef2d1a02f424af0736770e4bcf2c4b"
+    if Hardware::CPU.arm?
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.8-pre/splat_0.4.8-pre_darwin_arm64.tar.gz"
+      sha256 "03d6f0938983a5c14c377e6edfb1257d8db723c47cfbeded448ff02c156a3556"
 
       def install
         bin.install "splat"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_darwin_arm64.tar.gz"
-      sha256 "488e23b22e528cc463cdc6e0e77e0d20e2e1ad0e4dabf918a0c566bdf5ec691a"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.8-pre/splat_0.4.8-pre_darwin_amd64.tar.gz"
+      sha256 "04427efe292c3ec73835f2cfe2b03e5851c7560ed428e89bd25325496634f59d"
 
       def install
         bin.install "splat"
@@ -28,17 +28,17 @@ class Splat < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_linux_arm64.tar.gz"
-      sha256 "c65522046820c6c18f2b1524070c0a589312e0083baf6dec45a438b51fdd1e10"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.8-pre/splat_0.4.8-pre_linux_amd64.tar.gz"
+      sha256 "29c7004f295be9a90dd95dbf00bc0ac6f4846457b2f511144f379fb32ae49598"
 
       def install
         bin.install "splat"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.7/splat_0.4.7_linux_amd64.tar.gz"
-      sha256 "81d976ac1678c97c24dc6c0fae1da83c47da3125f59c73d35fe6340d8c3d2f5e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/YaleSpinup/splat/releases/download/v0.4.8-pre/splat_0.4.8-pre_linux_arm64.tar.gz"
+      sha256 "38483c9d817b416dfafe4143e9227b596c1eda1ce3f1a8d531bac35e2bafd1d7"
 
       def install
         bin.install "splat"
