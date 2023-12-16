@@ -5,21 +5,21 @@
 class Deco < Formula
   desc "DockerEvironmentCOntrol"
   homepage "https://github.com/YaleUniversity/deco"
-  version "1.4.6-pre"
+  version "1.4.6"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_darwin_arm64.tar.gz"
-      sha256 "bc48ed71ef9222ca1dfd59b0fab6919db4a16411f127bf3a159db2e093d66f61"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_darwin_arm64.tar.gz"
+      sha256 "152e3d7cf3dd9a189c8d5f22b63a41a67f0647846e89289edcf2552b4be84dba"
 
       def install
         bin.install "deco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_darwin_amd64.tar.gz"
-      sha256 "0a240c353a1c435abdba05af69be6ca26b10726e38107c556d20332836938d23"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_darwin_amd64.tar.gz"
+      sha256 "92ff819b0cdd03e08337d5e03043024c0ca0752c028f9c372919fcf9ca775822"
 
       def install
         bin.install "deco"
@@ -29,16 +29,16 @@ class Deco < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_linux_arm64.tar.gz"
-      sha256 "37e7e5ddaf9f054f0d24afd0d17003db3e6d619002a5cbf60a1a0a71bf0aaa4b"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_linux_arm64.tar.gz"
+      sha256 "8593bdb8b281c4480f48104d6ae2b7c386b2a2cc9622d0cea9a62a42da1edd78"
 
       def install
         bin.install "deco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_linux_amd64.tar.gz"
-      sha256 "9c149a2ab1b0c6387ad773161e3b01cc6bac8fbb53ef428e27bbb0157883ff29"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_linux_amd64.tar.gz"
+      sha256 "9aee06cda4c14be9d1970117293412500587d8c1a028670fb9ef1cb65c999352"
 
       def install
         bin.install "deco"
