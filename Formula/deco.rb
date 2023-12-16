@@ -5,21 +5,21 @@
 class Deco < Formula
   desc "DockerEvironmentCOntrol"
   homepage "https://github.com/YaleUniversity/deco"
-  version "1.4.5"
+  version "1.4.6-pre"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_darwin_arm64.tar.gz"
-      sha256 "b359bfe191a98f43f8e376cd85fc802edbdf65330d96579489273d8ab3aa5e5c"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_darwin_arm64.tar.gz"
+      sha256 "bc48ed71ef9222ca1dfd59b0fab6919db4a16411f127bf3a159db2e093d66f61"
 
       def install
         bin.install "deco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_darwin_amd64.tar.gz"
-      sha256 "2cc49d7f5e55de94171c36f9084b3833e7b53401a7be3aafa89c7581eb3f559f"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_darwin_amd64.tar.gz"
+      sha256 "0a240c353a1c435abdba05af69be6ca26b10726e38107c556d20332836938d23"
 
       def install
         bin.install "deco"
@@ -28,17 +28,17 @@ class Deco < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_linux_amd64.tar.gz"
-      sha256 "c1b08c2192548c0ebaed4a8cd787463364eb75ebc6ba6100f36feb6f04469791"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_linux_arm64.tar.gz"
+      sha256 "37e7e5ddaf9f054f0d24afd0d17003db3e6d619002a5cbf60a1a0a71bf0aaa4b"
 
       def install
         bin.install "deco"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_linux_arm64.tar.gz"
-      sha256 "98a20d86c414979e59ddc0c50779d4a3d71ecae725b5bc58ae1be5aef7eb312e"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6-pre/deco_1.4.6-pre_linux_amd64.tar.gz"
+      sha256 "9c149a2ab1b0c6387ad773161e3b01cc6bac8fbb53ef428e27bbb0157883ff29"
 
       def install
         bin.install "deco"
