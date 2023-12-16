@@ -5,21 +5,21 @@
 class Toker < Formula
   desc "Simple token management tool"
   homepage "https://github.com/YaleSpinup/toker"
-  version "0.3.0-pre7"
+  version "0.3.0-pre8"
   license "AGPL-3.0-or-later"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre7/toker_0.3.0-pre7_darwin_amd64.tar.gz"
-      sha256 "d3cf359dc8f9eed44f1ac1386ef67a1ad001000f92b1018b6bf304fe98dcb821"
+    if Hardware::CPU.arm?
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre8/toker_0.3.0-pre8_darwin_arm64.tar.gz"
+      sha256 "0f607cc7000d2179987b77b8c9156bb83fe03888ac4716de4dfea5d69ee4a8ea"
 
       def install
         bin.install "toker"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre7/toker_0.3.0-pre7_darwin_arm64.tar.gz"
-      sha256 "7d2622b0b4eab97e43716e361a8e852f5309e81ef42b5f54e13c17845d36a096"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre8/toker_0.3.0-pre8_darwin_amd64.tar.gz"
+      sha256 "5c74d2a0b7c3a224eb2ca569d99f9f34850e58e4d98abd33dfff1256b16adb54"
 
       def install
         bin.install "toker"
@@ -29,16 +29,16 @@ class Toker < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre7/toker_0.3.0-pre7_linux_arm64.tar.gz"
-      sha256 "bfe838c1ca6b3e6326abe22826ec4205ee76fd7e0f798cad6bbe67e9d8bd0ff6"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre8/toker_0.3.0-pre8_linux_arm64.tar.gz"
+      sha256 "d081f7a41b2dbdd644f6b79a32a59edc9f4ac10531fe0cf4aa5346006b5b48be"
 
       def install
         bin.install "toker"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre7/toker_0.3.0-pre7_linux_amd64.tar.gz"
-      sha256 "838f22fd9d519983696b4104240268357d64529fe132845154be5ce97ae72408"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre8/toker_0.3.0-pre8_linux_amd64.tar.gz"
+      sha256 "3b99e05cd83b91460be51949a51fdab5d92b3d31ceef81becebeabdfff33e7a7"
 
       def install
         bin.install "toker"
