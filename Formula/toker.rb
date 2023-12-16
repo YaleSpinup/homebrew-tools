@@ -5,21 +5,21 @@
 class Toker < Formula
   desc "Simple token management tool"
   homepage "https://github.com/YaleSpinup/toker"
-  version "0.3.0"
+  version "0.3.1-pre"
   license "AGPL-3.0-or-later"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_darwin_arm64.tar.gz"
-      sha256 "efd074d3794a4f8186f92020193fdb8ea2056d373fafb5d9622b0b107bef3756"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.1-pre/toker_0.3.1-pre_darwin_amd64.tar.gz"
+      sha256 "ec28c0b4b96dbd9f744698de606508817ceba3f6de4ce51113afc9608b54a905"
 
       def install
         bin.install "toker"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_darwin_amd64.tar.gz"
-      sha256 "83ca8acefa7af80438caf2dedd4e09aff702aad2313ec30f74bb250bb0b03fd3"
+    if Hardware::CPU.arm?
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.1-pre/toker_0.3.1-pre_darwin_arm64.tar.gz"
+      sha256 "63d015062df5cce57e6bb67625b4eeb41a4d20fd343d6a6a13b2b7981fa4697d"
 
       def install
         bin.install "toker"
@@ -29,16 +29,16 @@ class Toker < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_linux_arm64.tar.gz"
-      sha256 "8b8650bfb180ccda0b36809d8625c92f5af5d125e83fe721a8d3d7e50b5ed6cb"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.1-pre/toker_0.3.1-pre_linux_arm64.tar.gz"
+      sha256 "91102154003c02293e073a029ab9851f8fc47f84bab4d40109d7c15fe8d93441"
 
       def install
         bin.install "toker"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_linux_amd64.tar.gz"
-      sha256 "e739d840adb525aa6fa356d721f5a896139be1d6da05decf9890e18af2b4e9f6"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.1-pre/toker_0.3.1-pre_linux_amd64.tar.gz"
+      sha256 "aefd9b23369804a9f300089775ae002541a8d47abf164091bc161a287372a1a8"
 
       def install
         bin.install "toker"
