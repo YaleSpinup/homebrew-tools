@@ -5,21 +5,21 @@
 class Spinup < Formula
   desc "Simple command-line interface for spinup"
   homepage "https://github.com/YaleSpinup/spinup-cli"
-  version "0.4.8"
+  version "0.4.9"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.8/spinup-cli_0.4.8_darwin_arm64.tar.gz"
-      sha256 "80ee2a11001a298e6e2aacd2a5bf701dad20f50b9472c6d201775b3359df1fe2"
+      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.9/spinup-cli_0.4.9_darwin_arm64.tar.gz"
+      sha256 "1d9ff1d50f854470a7e01e0b5be0a3cd52e8f6a6e7ecd5bfdddb04a881f97ccb"
 
       def install
         bin.install "spinup"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.8/spinup-cli_0.4.8_darwin_amd64.tar.gz"
-      sha256 "e4a8fc4ee318e19e628cc765063443eef6bf5b9015b8c2aa5eb1eb8cbd6bd7b5"
+      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.9/spinup-cli_0.4.9_darwin_amd64.tar.gz"
+      sha256 "6bf3a0f26093ea1f67a46efb5b14dffacfc3219fd39b70f890454b0d02fcf3d0"
 
       def install
         bin.install "spinup"
@@ -28,17 +28,17 @@ class Spinup < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.8/spinup-cli_0.4.8_linux_amd64.tar.gz"
-      sha256 "33cac6425109c3e8d7d0a0491ea22487928030c376b946b8ce57d7591aa764b7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.9/spinup-cli_0.4.9_linux_arm64.tar.gz"
+      sha256 "7fcc5ded0a621957f685113208530d2049eda74b1f1f07978858947d54a307a6"
 
       def install
         bin.install "spinup"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.8/spinup-cli_0.4.8_linux_arm64.tar.gz"
-      sha256 "14804739288e7297889b5af33c68d80f2e4e890a0c0aa06d4fc7e75b24c64943"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleSpinup/spinup-cli/releases/download/v0.4.9/spinup-cli_0.4.9_linux_amd64.tar.gz"
+      sha256 "eef9ed876d2e6ec60575d07d59d399042daa26b01468815d7edbbbd665e77cdf"
 
       def install
         bin.install "spinup"
