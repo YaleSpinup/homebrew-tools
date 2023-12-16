@@ -5,21 +5,21 @@
 class Deco < Formula
   desc "DockerEvironmentCOntrol"
   homepage "https://github.com/YaleUniversity/deco"
-  version "1.4.6"
+  version "1.4.7"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_darwin_arm64.tar.gz"
-      sha256 "152e3d7cf3dd9a189c8d5f22b63a41a67f0647846e89289edcf2552b4be84dba"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.7/deco_1.4.7_darwin_arm64.tar.gz"
+      sha256 "d9da0d79775fd3b4a05d249f5eea3b9b262f91b2a42fea350ce82c2e5224b829"
 
       def install
         bin.install "deco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_darwin_amd64.tar.gz"
-      sha256 "92ff819b0cdd03e08337d5e03043024c0ca0752c028f9c372919fcf9ca775822"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.7/deco_1.4.7_darwin_amd64.tar.gz"
+      sha256 "1669035c8201832a4959636eddf5ad42587c0caac92447a4f1721107bee9d797"
 
       def install
         bin.install "deco"
@@ -29,16 +29,16 @@ class Deco < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_linux_arm64.tar.gz"
-      sha256 "8593bdb8b281c4480f48104d6ae2b7c386b2a2cc9622d0cea9a62a42da1edd78"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.7/deco_1.4.7_linux_arm64.tar.gz"
+      sha256 "2f48953ef48dff12b42d7871a2b4280844cac9cd8863fd00b4e5a42ba267c9ee"
 
       def install
         bin.install "deco"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.6/deco_1.4.6_linux_amd64.tar.gz"
-      sha256 "9aee06cda4c14be9d1970117293412500587d8c1a028670fb9ef1cb65c999352"
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.7/deco_1.4.7_linux_amd64.tar.gz"
+      sha256 "29d308538a89c10b44cd3d8785db357f7cb2bc8bf93931223fe519a6a47399f6"
 
       def install
         bin.install "deco"
