@@ -9,17 +9,17 @@ class Deco < Formula
   license "AGPL-3.0-or-later"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_darwin_amd64.tar.gz"
-      sha256 "52bc23b28fd4e16d32ff803ac79b7e377f29c6dbf3f4f7a8d3449f8c2fa03afc"
+    if Hardware::CPU.arm?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_darwin_arm64.tar.gz"
+      sha256 "b359bfe191a98f43f8e376cd85fc802edbdf65330d96579489273d8ab3aa5e5c"
 
       def install
         bin.install "deco"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_darwin_arm64.tar.gz"
-      sha256 "56b5a6986389082e46dd3cfc04689e6db36ba19e5c7282610054e9bdf79781c7"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_darwin_amd64.tar.gz"
+      sha256 "2cc49d7f5e55de94171c36f9084b3833e7b53401a7be3aafa89c7581eb3f559f"
 
       def install
         bin.install "deco"
@@ -28,17 +28,17 @@ class Deco < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_linux_arm64.tar.gz"
-      sha256 "033f1c647dbdddeea47f78cfd792a00582569bdbfb86facc25ee6f5e0340af4b"
+    if Hardware::CPU.intel?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_linux_amd64.tar.gz"
+      sha256 "c1b08c2192548c0ebaed4a8cd787463364eb75ebc6ba6100f36feb6f04469791"
 
       def install
         bin.install "deco"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_linux_amd64.tar.gz"
-      sha256 "fb1bec92073aff88305aec370feb7289dc73828f16c95391b815a3346ab67ecd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/YaleUniversity/deco/releases/download/v1.4.5/deco_1.4.5_linux_arm64.tar.gz"
+      sha256 "98a20d86c414979e59ddc0c50779d4a3d71ecae725b5bc58ae1be5aef7eb312e"
 
       def install
         bin.install "deco"
