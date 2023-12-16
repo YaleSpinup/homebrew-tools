@@ -5,21 +5,21 @@
 class Toker < Formula
   desc "Simple token management tool"
   homepage "https://github.com/YaleSpinup/toker"
-  version "0.3.0-pre9"
+  version "0.3.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre9/toker_0.3.0-pre9_darwin_arm64.tar.gz"
-      sha256 "15c32ebfa088bf90105defac93c0cdf98f6d286135fc779bcfdc139ce34d5618"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_darwin_arm64.tar.gz"
+      sha256 "efd074d3794a4f8186f92020193fdb8ea2056d373fafb5d9622b0b107bef3756"
 
       def install
         bin.install "toker"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre9/toker_0.3.0-pre9_darwin_amd64.tar.gz"
-      sha256 "ded4fcc0e72745342efeeb06a9628743a9cae202ca6f84345c5f060872d9925c"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_darwin_amd64.tar.gz"
+      sha256 "83ca8acefa7af80438caf2dedd4e09aff702aad2313ec30f74bb250bb0b03fd3"
 
       def install
         bin.install "toker"
@@ -29,16 +29,16 @@ class Toker < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre9/toker_0.3.0-pre9_linux_arm64.tar.gz"
-      sha256 "0ecf73d17397cd49561b536a4e2ba2158a3ac68c251b45bbbff10493910ecc68"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_linux_arm64.tar.gz"
+      sha256 "8b8650bfb180ccda0b36809d8625c92f5af5d125e83fe721a8d3d7e50b5ed6cb"
 
       def install
         bin.install "toker"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0-pre9/toker_0.3.0-pre9_linux_amd64.tar.gz"
-      sha256 "81d2b139940f8f476a2a5dfe5fdc3965dd33642c94eae25631070d39415a0b0d"
+      url "https://github.com/YaleSpinup/toker/releases/download/v0.3.0/toker_0.3.0_linux_amd64.tar.gz"
+      sha256 "e739d840adb525aa6fa356d721f5a896139be1d6da05decf9890e18af2b4e9f6"
 
       def install
         bin.install "toker"
